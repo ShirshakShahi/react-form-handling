@@ -20,7 +20,6 @@ const SimpleInput = (props) => {
   const formSubmissionHandler = event => {
     event.preventDefault();
 
-    // const enteredValue = nameInputRef.current.value;
     setEnteredNameTouched(true);
     if (enteredName.trim() === '') {
       setEnteredNameIsValid(false);
@@ -28,9 +27,6 @@ const SimpleInput = (props) => {
     }
     setEnteredNameIsValid(true);
     console.log(enteredName);
-    // console.log(enteredValue);
-    // nameInputRef.current.value = ""; => this is not recommended as it directly manipulates the DOM.
-
     setEnteredName('');
   }
 
