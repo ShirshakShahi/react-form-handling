@@ -7,6 +7,12 @@ const SimpleInput = (props) => {
   const enteredNameIsValid = enteredName.trim() !== "";
   const nameInputIsValid = !enteredNameIsValid && enteredNameTouched;
 
+  let formIsValid = false;
+
+  if (enteredNameIsValid) {
+    formIsValid = true;
+  } 
+  
   const nameInputChangeHandler = (event) => {
     setEnteredName(event.target.value);
   }
@@ -35,11 +41,11 @@ const SimpleInput = (props) => {
     <form onSubmit={formSubmissionHandler}>
       <div className={nameInputClasses}>
         <label htmlFor='name'>Your Name</label>
-        <input type='text' value={enteredName} onChange={nameInputChangeHandler} onBlur={nameInputBlur} id='name' />
+        <input type='text' autoComplete='off' value={enteredName} onChange={nameInputChangeHandler} onBlur={nameInputBlur} id='name' />
         {nameInputIsValid && <p className='error-text'>Please enter a valid name!!!</p>}
       </div>
       <div className="form-actions">
-        <button>Submit</button>
+        <button disabled={!formIsValid}>Submit</button>
       </div>
     </form>
   );
