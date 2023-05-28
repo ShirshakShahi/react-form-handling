@@ -11,7 +11,6 @@ const SimpleInput = (props) => {
   } = useInput(value => value.trim() !== '');
 
 
-
   const {
     value: enteredEmail,
     isValid: enteredEmailIsValid,

@@ -1,8 +1,8 @@
-import SimpleInput from './components/SimpleInput';
-function App() {
+import BasicForm from './components/BasicForm';
+const App = () => {
   return (
     <div className="app">
-      <SimpleInput />
+      <BasicForm />
     </div>
   );
 }
