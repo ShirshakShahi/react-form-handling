@@ -67,7 +67,7 @@ const BasicForm = (props) => {
             onChange={firstNameChangeHandler}
             onBlur={firstNameBlurHandler}
             autoComplete="OFF" />
-          {firstNameInputHasError && <p className='error-text'>Can you please a valid first name for God's sake?</p>}
+          {firstNameInputHasError && <p className='error-text'>Can you please enter a valid first name for God's sake?</p>}
         </div>
         <div className={lastNameClasses}>
           <label htmlFor='name'>Last Name</label>
@@ -87,7 +87,7 @@ const BasicForm = (props) => {
           onChange={emailChangeHandler}
           onBlur={emailBlurHandler}
           autoComplete="OFF" />
-        {emailHasError && <p className='error-text'>How can someone be so dumb that he doesn't know his own email ID?</p>}
+        {emailHasError && <p className='error-text'>How can someone be so dumb that they don't know their own email ID?</p>}
       </div>
       <div className='form-actions'>
         <button disabled={!canSumbit}>Submit</button>
